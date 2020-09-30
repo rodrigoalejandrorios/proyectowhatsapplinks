@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tu mensaje automatico | Go Digital</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="http://www.godigitalrosario.com/"><img src="images/logo.svg"></a>
+        </div>
+
+        <div class="secmenu">
+            <ul>
+                <li class="btn-uno"><a href="#">Otras Aplicaciones</a></li>
+                <li class="btn-dos"><a href="https://github.com/rodrigoalejandrorios/whatsappmessage">Documentación</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="functionform">
+        <div class="formspace">
+            <form class="formstyle" id="formfunction">
+                <input id="formNumber" class="form-num" type="search" placeholder="Numero de Telefono">
+                
+                <label class="form-emoji" id="formEmoji">
+                    <img id="emojiActive" class="actEmoji" src="images/ojos-cerrado.svg">
+                    <input class="themeinp" type="checkbox" id="checked">
+                    <div id="emojiBoxPadre" class="dropdown-menu">
+                        
+                        <ul class="dropdown-menu-em"  id="emojiBox" >
+                           
+                            <!--Meter los emojis acas-->
+                            
+                        </ul>
+                        <input id="searchEmoji" class="emoji-search" type="search" placeholder="Buscar😉">
+                    </div>
+                    
+                    
+                </label>
+                
+                <textarea class="form-msj" name="" id="mensaje" cols="30" rows="10" placeholder="Tu mensaje..."></textarea>
+                <emoji-picker></emoji-picker>
+                
+                <button class="form-btn" id="submit">CREAR LINK</button>
+                <div id="boxLink">
+                    <input id="textin" type="text">
+                    <button id="copybtn">
+                        <p id="disText">Copiar Link</p>
+                        <p id="enText">Link Copiado🔥</p>
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+    </section>
+
+    <section>
+        
+    </section>
+    
+
+    <script src="js/app.js"></script>
+    
+
+</body>
+</html>

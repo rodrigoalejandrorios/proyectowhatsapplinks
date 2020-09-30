@@ -1,0 +1,321 @@
+@import "scss/_var.scss";
+
+/*
+$color-btn: #2BFC00;
+$color-text: #353535;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.5s;
+}
+
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 10px 100px;
+    background: #fff;
+    box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.27);
+    position: fixed;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    a{
+        text-decoration: none;
+    }
+    img{
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+    }
+}
+
+.secmenu{
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        margin: 5px 0;
+        align-items: center;
+    }
+
+    .btn-uno, .btn-dos{
+        margin: 0 5px;
+        a{
+            text-decoration: none;
+            color: $color-text;
+        }
+    }
+
+    .btn-dos{
+        background: #7EBFE6;
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
+    
+}
+
+
+//FORM
+
+.functionform{
+    position: relative;
+    width: 100%;
+    top: 100px;
+}
+
+.formspace{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.formstyle{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    
+}
+
+//ELEMENTOS FORM 
+.form-num{
+    margin: 10px 0;
+    height: 45px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    color: $color-text;
+    outline: none;
+    &:focus{
+        box-shadow: 0 0 0 1px $color-btn,0 0 0 5px rgba(29, 152, 209, 0.3);
+        order-radius: 4px;
+        border-color: transparent;
+        -webkit-appearance: none;
+    }
+}
+
+.themeinp{
+    display: none;
+}
+
+.div-hidden {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.dropdown-menu{
+    width: 370px;
+    height: 310px;
+    position: absolute;
+    z-index: 2;
+    top: -100px;
+    right: 40px;
+    display: grid;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+
+
+.emoji-search{
+    background: #fff;
+    margin-top: 15px;
+    z-index: 2;
+    width: 100%;
+    max-width: 368px;
+    height: 30px;
+    padding: 0 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    outline: none;
+    &:focus{
+        box-shadow: 0 0 0 1px $color-btn,0 0 0 5px rgba(29, 152, 209, 0.3);
+        order-radius: 4px;
+        border-color: transparent;
+        -webkit-appearance: none;
+    }
+}
+
+.dropdown-menu-em {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(8, 40px);
+    grid-auto-rows: max-content;
+    height: 235px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    user-select: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+        width: 0.5rem;
+        
+    }
+    
+    &::-webkit-scrollbar-track{
+        background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb{
+        border-radius: 5px;
+        transition: all 0.5s;
+        background-color: rgb(148, 148, 148);
+    }
+
+    
+
+    li{
+        position: relative;
+        list-style: none;
+        text-align: center;
+        color: #000;
+        font-size: 18px;
+        cursor: pointer;
+        border: #000;
+        padding: 5px 10px;
+        border-radius: 5px;
+        
+    }
+    #dropDay{
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        user-select: none;
+    }
+}
+
+.themeinp + .dropdown-menu {
+    display: none;
+    
+}
+
+.themeinp:checked + .dropdown-menu {
+    display: grid;
+}
+
+
+
+.form-emoji{
+    position: relative;
+    top: 235px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.actEmoji{
+    width: 35px;
+    height: 35px;
+    user-select: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.form-msj{
+    height: 230px;
+    margin: 10px 0;
+    resize: none;
+    border-radius: 5px;
+    padding: 5px 33px 33px 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    color: $color-text;
+    outline: none;
+    &:focus{
+        box-shadow: 0 0 0 1px $color-btn,0 0 0 5px rgba(29, 152, 209, 0.3);
+        order-radius: 4px;
+        border-color: transparent;
+        -webkit-appearance: none;
+    }
+}
+
+.form-btn{
+    background: $color-btn;
+    color: #fff;
+    height: 35px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+    position: relative;
+    top: 15px;
+    font-size: 18px;
+    outline: none;
+    &:hover{
+        background: $color-text;
+        color: #fff;
+        border: none;
+    }
+
+    
+}
+
+
+
+//Link copiar
+#boxLink{
+    position: relative;
+    top: 30px;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr)
+}
+
+#textin{
+    margin-right: 5px;
+    width: auto;
+    grid-column: span 3;
+    height: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#copybtn{
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background: $color-btn;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    outline: none;
+    cursor: pointer;
+}
+
+#disText{
+    color: #fff;
+    position: relative;
+    top: 10px;
+    font-size: 18px;
+}
+
+#enText{
+    position: relative;
+    top: 100px;
+    color: #fff;
+    font-size: 16px;
+}
